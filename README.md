@@ -90,4 +90,10 @@ Bob,100,4.5
 
 ```
 
+## Help
 
+Need help? Open an issue in: [ISSUES](https://github.com/josnin/test_data_generator/issues)
+
+
+## Contributing
+Want to improve and add feature? Fork the repo, add your changes and send a pull request.
