@@ -1,0 +1,9 @@
+{
+ "columns": ["Name", "Age", "Height"],
+ "data_types": {
+     "Name": ["John", "Alice", "Bob"],
+     "Age": [0, 4, 100],
+     "Height": [1.2, 3.2, 4.5]
+ },
+ "csv_path": "test_data.csv"
+}
