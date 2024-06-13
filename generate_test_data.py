@@ -3,15 +3,15 @@ import json
 import sys
 import itertools
 
-def generate_test_data(columns, data_types_config):
+def generate_test_data(parameters):
     test_data = []
 
     
-    header_row = columns
+    header_row = parameters.keys()
     test_data.append(header_row)
 
     
-    value_combinations = [data_types_config[data_type] for data_type in columns]
+    value_combinations = [parameters[column] for column in headers]
 
     # Generate test data rows using combinations of values
     for combination in itertools.product(*value_combinations):
@@ -34,11 +34,11 @@ if __name__ == '__main__':
     with open(config_file, 'r') as f:
         config = json.load(f)
 
-    columns = config['columns']
-    data_types_config = config['data_types']
+    #columns = config['columns']
+    parameters = config['parameters']
     output_file = config['csv_path']
 
-    test_data = generate_test_data(columns, data_types_config)
+    test_data = generate_test_data(parameters)
     write_to_csv(output_file, test_data)
 
     print(f"Test data generated successfully and saved to {output_file}.")
