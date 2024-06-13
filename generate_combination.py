@@ -26,7 +26,7 @@ def write_to_csv(filename, test_data):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: python generate_test_data.py <config_file>")
+        print("Usage: python generate_combination.py <config_file>")
         sys.exit(1)
 
     config_file = sys.argv[1]
