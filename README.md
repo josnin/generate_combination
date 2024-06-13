@@ -1,4 +1,4 @@
-# Test Data Generator
+# Generate Combination
 
 This Python script generates test data combinations based on predefined lists of values for each column. It can be useful for generating test data for automated testing, data analysis, or any other purposes where sample data is needed.
 
@@ -16,7 +16,7 @@ This Python script generates test data combinations based on predefined lists of
 2. Navigate to the directory containing the script and configuration file:
 
    ```bash
-     cd ~/test_data_generator
+     cd ~/generate_combination
    ```
 
 
@@ -25,7 +25,7 @@ This Python script generates test data combinations based on predefined lists of
 5. Run the script using the following command:
 
 ```python
-python generate_test_data.py config.json
+python generate_combination.py config.json
 ```
 
 
@@ -37,16 +37,14 @@ Replace `config.json` with the path to your customized configuration file.
 
 The `config.json` file contains the following parameters:
 
-- **columns**: List of column names for the test data.
-- **data_types**: Dictionary specifying custom lists of values for each column. Each key is a column name, and the corresponding value is a list of predefined values.
+- **parameters**: Dictionary specifying custom lists of values for each column. Each key is a column name, and the corresponding value is a list of predefined values.
 - **csv_path**: Path to the output CSV file where the generated test data will be saved.
 
 ## Example
 
 ```json
 {
- "columns": ["Name", "Age", "Height"],
- "data_types": {
+ "parameters": {
      "Name": ["John", "Alice", "Bob"],
      "Age": [0, 4, 100],
      "Height": [1.2, 3.2, 4.5]
@@ -92,7 +90,7 @@ Bob,100,4.5
 
 ## Help
 
-Need help? Open an issue in: [ISSUES](https://github.com/josnin/test_data_generator/issues)
+Need help? Open an issue in: [ISSUES](https://github.com/josnin/generate_combination/issues)
 
 
 ## Contributing
